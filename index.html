@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter sign-up form with success message</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<main>
+    <div class="nwltr">
+        <div class="nwltr__img-box">
+            <picture>
+                <source media="(min-width:62em)" srcset="/images/illustration-sign-up-desktop.svg">
+                <img class="nwltr__img" src="/images/illustration-sign-up-mobile.svg" alt="sign-up">
+            </picture>
+        </div>
+        <div class="nwltr__content">
+            <div class="nwltr__info">
+                <h1 class="nwltr__title">Stay updated!</h1>
+                <p class="nwltr__description">Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="nwltr__features">
+                    <li class="nwltr__feature-item">
+                        <img class="nwltr__feature-icon" src="/images/icon-list.svg" alt="list">
+                        <p class="nwltr__feature-text">Product discovery and building what matters</p>
+                    </li>
+                    <li class="nwltr__feature-item">
+                        <img class="nwltr__feature-icon" src="/images/icon-list.svg" alt="list">
+                        <p class="nwltr__feature-text">Measuring to ensure updates are a success</p>
+                    </li>
+                    <li class="nwltr__feature-item">
+                        <img class="nwltr__feature-icon" src="/images/icon-list.svg" alt="list">
+                        <p class="nwltr__feature-text">And much more!</p>
+                    </li>
+                </ul>
+            </div>
+            <form class="nwltr__form" data-form novalidate autocomplete="off">
+                <div class="nwltr__email">
+                    <label class="lbl" for="email-nwltr">Email address</label>
+                    <p class="err err--hidden" data-error>Valid email required</p>
+                    <input class="nwltr__input ipt" data-email type="email" id="email-nwltr" placeholder="email@company.com">
+                </div>
+                <button class="btn" type="submit">Subscribe to monthly newsletter</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup--hidden" data-popup>
+        <div class="popup__content">
+            <img class="popup__icon" src="/images/icon-success.svg" alt="successful">
+            <h2 class="popup__title">Thanks for subscribing!</h2>
+            <p class="popup__description">
+                A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+            <button class="popup__btn btn" data-dismis>Dismiss message</button>
+        </div>
+    </div>
+</main>
+</body>
+</html>
